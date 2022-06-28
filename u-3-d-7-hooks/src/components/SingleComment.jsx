@@ -1,12 +1,11 @@
 
-import { Component } from "react";
 
-class SingleComment extends Component {
-    render() {
+
+const SingleComment = ({bookComments}) => {
+    
         return (
-            <>{this.props.bookComments.comment}</>
+            <>{bookComments.comment}</>
         )
     }
-}
 
 export default SingleComment

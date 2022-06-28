@@ -1,18 +1,16 @@
-import { Component } from "react";
+
 import SingleComment from "./SingleComment";
 
-class CommentList extends Component {
-    render() {
+const CommentList = ({commentsArray }) => {
         return (
                
                    <>
-                       { this.props.commentsArray && this.props.commentsArray.map((comment) => (
+                       {commentsArray && commentsArray.map((comment) => (
                         <li key={comment._id}><SingleComment  bookComments={comment}/></li>
                         ))}
                    </>
                
         )
-
     }
-}
+
 export default CommentList

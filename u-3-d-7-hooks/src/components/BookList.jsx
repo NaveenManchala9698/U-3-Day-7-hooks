@@ -1,20 +1,19 @@
-import { Component } from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 
 
 
-class BookList extends Component {
+const BookList = ({books, changeBook}) => {
 
-    render() {
         return (
             <Container>
                <h2>Books</h2>
                 <Row>
-                    {this.props.books && this.props.books.map(SelectedBook => (
+                    {books && books.map(SelectedBook => (
                         <Col md={4} key={SelectedBook.asin}>
                             <SingleBook book={SelectedBook} 
-                            changeBook = {this.props.changeBook}
+                            changeBook = {changeBook}
                             />
                         </Col>
                     ))}
@@ -25,6 +24,6 @@ class BookList extends Component {
 
         )
     }
-}
+
 
 export default BookList
